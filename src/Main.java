@@ -1,36 +1,38 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Jenis peliharaan: Landak");
+        System.out.println("=== Identitas Landak ===");
+        System.out.println("[1.] Sonic");
+        System.out.println("[2.] Amy");
 
-        System.out.println();
+        int pilihLandak;
 
-        identitas();
+        System.out.println("Pilih nomor landak:");
+        Scanner scanner = new Scanner(System.in);
 
-        if(!statusKehidupan()){
-            System.out.println("Hewan peliharaan telah berpulang");
-        } else{
-            System.out.println("Hewan peliharaan ada dan hidup");
+        pilihLandak = scanner.nextInt();
+
+        if (pilihLandak == 1) {
+            Landak sonic = new Landak("Sonic", "Jantan", 3, "Ciit");;
+            sonic.identitas();
+
+            if (!sonic.statusKehidupan()) {
+                System.out.println("Hewan peliharaan telah berpulang ke rahmatullah");
+            } else {
+                System.out.println("Hewan peliharaan ada dan hidup");
+            }
+        } else if (pilihLandak == 2) {
+            Landak amy = new Landak("Amy", "Betina", 2, "Cuiit");;
+            amy.identitas();
+
+            if (!amy.statusKehidupan()) {
+                System.out.println("Hewan peliharaan telah berpulang ke rahmatullah");
+            } else {
+                System.out.println("Hewan peliharaan ada dan hidup");
+            }
+        } else {
+            System.out.println("Pilihan tidak valid");
         }
-
-
-    }
-
-    static void identitas(){
-        String nama = "Sonic";
-        System.out.println("Nama peliharaan: " + nama);
-
-        String JenisKelamin = "Jantan";
-        System.out.println("Jenis Kelamin peliharaan: " + JenisKelamin);
-
-        int umur = 3;
-        System.out.println("Umur peliharaan: " + umur + " bulan");
-
-        String suara = "Ciit";
-        System.out.println("Suara peliharaan: " + suara);
-    }
-
-    static boolean statusKehidupan(){
-        return false;
     }
 }
