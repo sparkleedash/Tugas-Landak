@@ -12,10 +12,10 @@ class Landak {
         }
 
         void identitas() {
-                System.out.println("Nama peliharaan: " + nama);
-                System.out.println("Jenis Kelamin peliharaan: " + jenisKelamin);
-                System.out.println("Umur peliharaan: " + umur + " bulan");
-                System.out.println("Suara peliharaan: " + suara);
+                System.out.println("Nama Landak: " + nama);
+                System.out.println("Jenis Kelamin Landak: " + jenisKelamin);
+                System.out.println("Umur Landak: " + umur + " bulan");
+                System.out.println("Suara Landak: " + suara);
         }
 
         boolean statusKehidupan() {
